@@ -10,7 +10,7 @@ isDebuggerPresent = windll.kernel32.IsDebuggerPresent()
 
 def isDebbugerPresent():
     # Detect if there is a debbuger scanning our program
-    if (isDebuggerPresent()):
+    if isDebuggerPresent():
         print("Error ! You are not allowed to debug the Program !")
         exit(-1)
     return 0
