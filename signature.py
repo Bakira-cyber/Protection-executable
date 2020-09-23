@@ -4,7 +4,6 @@ import pandas as pd
 
 
 def gen():
-    # OpenSSL.crypto.PKey().generate_key(crypto.TYPE_RSA, 256)
     key = crypto.PKey()
     key.generate_key(crypto.TYPE_RSA, 1024)
     print(key)

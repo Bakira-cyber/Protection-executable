@@ -6,14 +6,14 @@ import time
 import antiDBG
 import controlValues
 
+
 class DetectDBG(Thread):
 
     def __init__(self):
         Thread.__init__(self)
-        
 
     def run(self):
-        while True :
+        while True:
             sys.stdout.write("Analyse")
             sys.stdout.flush()
 

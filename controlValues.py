@@ -2,6 +2,7 @@
 import hashlib
 import sys
 
+
 def controlValues(path):
     with open(path, 'rb') as f:
         code = f.read()
@@ -34,4 +35,3 @@ def controlValues(file_name):
         print("checksum verification failed!.")
         sys.exit(0)
 """
-
