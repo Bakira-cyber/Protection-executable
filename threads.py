@@ -17,7 +17,7 @@ class DetectDBG(Thread):
             sys.stdout.write("Analyse")
             sys.stdout.flush()
 
-            antiDBG.isDebuggerPresent()
+            # antiDBG.isDebuggerPresent()
             controlValues.controlValues(os.path.dirname(sys.argv[0]))
             # os.getcwd() or os.path.dirname(sys.argv[0])
 
