@@ -3,12 +3,6 @@ import base64
 import pandas as pd
 
 
-def gen():
-    key = crypto.PKey()
-    key.generate_key(crypto.TYPE_RSA, 1024)
-    print(key)
-
-
 def sign():
     df = pd.read_excel(r'D:\Python projects\Software protection\Licence.xlsx')
     data = df.to_string()
@@ -26,8 +20,8 @@ def sign():
     return sign
 
 
-def verify(signature):
-    df = pd.read_excel(r'D:\Python projects\Software protection\Licence.xlsx')
+def verify(path,path_sign):
+    df = pd.read_excel(path)
     data = df.to_string()
     key_file = open("public.pem", "r")
     key = key_file.read()
@@ -41,6 +35,8 @@ def verify(signature):
     data = data.encode()
     x509 = crypto.X509()
     x509.set_pubkey(pkey)
+    with open(path_sign,"rb") as f:
+        signature=f.read()
     return crypto.verify(x509, signature, data, "sha256")
 
 
