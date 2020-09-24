@@ -22,7 +22,7 @@ def sign():
     data = data.encode()
     sign = crypto.sign(pkey, data, "sha256")
     data_base64 = base64.b64encode(sign)
-    print(data_base64)
+    print(type(data_base64))
     return sign
 
 
@@ -44,9 +44,9 @@ def verify(signature):
     return crypto.verify(x509, signature, data, "sha256")
 
 
-# signature = sign()
+signature = sign()
 
 # print(verify(signature))
 
-code = compile("print('hello world')", '<string>', 'eval')
-exec(code)
+# code = compile("print('hello world')", '<string>', 'eval')
+# exec(code)

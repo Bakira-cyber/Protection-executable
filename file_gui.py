@@ -19,6 +19,7 @@ class gui:
         tkinter.Entry.pack(
             tkinter.Entry(self.frame, textvariable=self.sign_file, width=25, state="readonly", bg="#9ac0e4",
                           exportselection=0))
+        self.frame.pack()
 
     def open_excel_button(self):
         file_name = filedialog.askopenfile(mode='r', filetypes=[("Excel files", "*.xlsx")])
