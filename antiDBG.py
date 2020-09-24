@@ -4,12 +4,11 @@
 # https://github.com/Arvanaghi/CheckPlease/blob/master/Python/detect_debugging.py
 
 from ctypes import *
-isDebuggerPresent = windll.kernel32.IsDebuggerPresent()
 
 
-def isDebbugerPresent():
+def isThereADebugger():
     # Detect if there is a debbuger scanning our program
-    if isDebuggerPresent():
+    if windll.kernel32.IsDebuggerPresent():
         print("Error ! You are not allowed to debug the Program !")
         exit(-1)
     return 0
