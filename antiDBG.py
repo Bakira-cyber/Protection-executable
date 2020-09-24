@@ -4,7 +4,6 @@
 # https://github.com/Arvanaghi/CheckPlease/blob/master/Python/detect_debugging.py
 
 from ctypes import *
-
 isDebuggerPresent = windll.kernel32.IsDebuggerPresent()
 
 
