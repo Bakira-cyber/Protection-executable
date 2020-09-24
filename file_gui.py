@@ -41,7 +41,7 @@ class gui:
                 print(e)
 
     def open_valide(self):
-        if signature.verify(self.excel_file,self.sign_file) is None:
+        if signature.verify(self.excel_file.get(),self.sign_file.get()) is None:
             win = tkinter.Tk()
             win.configure(background='#9ac0e4')
             win.title("Vérifier la clé produit")
