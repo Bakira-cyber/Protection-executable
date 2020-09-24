@@ -18,6 +18,7 @@ def sign():
     data_base64 = base64.b64encode(signature)
 
     with open("signature.txt", "wb") as f:
+        print(data_base64)
         f.write(data_base64)
 
 sign()

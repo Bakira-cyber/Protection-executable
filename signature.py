@@ -16,7 +16,7 @@ def sign():
     data = data.encode()
     sign = crypto.sign(pkey, data, "sha256")
     data_base64 = base64.b64encode(sign)
-    print(type(data_base64))
+    print(data_base64)
     return sign
 
 
@@ -33,10 +33,13 @@ def verify(path, path_sign):
     data = data.encode()
     x509 = crypto.X509()
     x509.set_pubkey(pkey)
+    sign2=sign()
+    print(crypto.verify(x509,sign2,data,"sha256"))
     with open(path_sign, "rb") as f:
         signature = f.read()
         print(signature)
-    return crypto.verify(x509, signature, data, "sha256")
+    print(crypto.verify(x509, signature, data, "sha256"))
+    return 0
 
 
 signature = sign()

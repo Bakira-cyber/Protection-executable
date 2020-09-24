@@ -6,7 +6,6 @@ import file_gui
 win = tkinter.Tk()
 win.title("Vérifier la clé produit")
 app = file_gui.gui()
-win.geometry("300x50")
 win.mainloop()
 
 # check=threads.DetectDBG()
