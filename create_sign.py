@@ -20,5 +20,3 @@ def sign():
     with open("signature.txt", "wb") as f:
         print(data_base64)
         f.write(data_base64)
-
-sign()

@@ -37,12 +37,11 @@ def verify(path, path_sign):
     print(crypto.verify(x509,sign2,data,"sha256"))
     with open(path_sign, "rb") as f:
         signature = f.read()
-        print(signature)
+        print(type(signature))
     print(crypto.verify(x509, signature, data, "sha256"))
     return 0
 
 
-signature = sign()
 
 # print(verify(signature))
 
