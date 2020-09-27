@@ -2,11 +2,13 @@ import tkinter
 import true_key
 import threads
 import file_gui
+import platform
 
-win = tkinter.Tk()
-win.title("Vérifier la clé produit")
-app = file_gui.gui()
-win.mainloop()
+print(platform.uname())
+# win = tkinter.Tk()
+# win.title("Vérifier la clé produit")
+# app = file_gui.gui()
+# win.mainloop()
 
 # check=threads.DetectDBG()
 # check.run()
