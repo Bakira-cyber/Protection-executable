@@ -1,9 +1,20 @@
 import tkinter
 import true_key
+import threads
+import file_gui
+import platform
 
-win = tkinter.Tk()
-win.configure(background='#9ac0e4')
-win.title("Vérifier la clé produit")
-app = true_key.c_key(win)
-win.geometry("300x50")
-win.mainloop()
+print(platform.uname())
+# win = tkinter.Tk()
+# win.title("Vérifier la clé produit")
+# app = file_gui.gui()
+# win.mainloop()
+
+# check=threads.DetectDBG()
+# check.run()
+# win = tkinter.Tk()
+# win.configure(background='#9ac0e4')
+# win.title("Vérifier la clé produit")
+# app = true_key.c_key(win)
+# win.geometry("300x50")
+# win.mainloop()

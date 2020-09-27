@@ -5,12 +5,13 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 import base64
 
-#Cypher program
-#https://www.thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
-#https://nitratine.net/blog/post/encryption-and-decryption-in-python/
 
-#Protect binary executable :
-#https://www.embedded.com/protecting-binary-executables/    
+# Cypher program
+# https://www.thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
+# https://nitratine.net/blog/post/encryption-and-decryption-in-python/
+
+# Protect binary executable :
+# https://www.embedded.com/protecting-binary-executables/
 
 def generate_key():
     password_provided = "password"  # This is input in the form of a string
@@ -25,8 +26,9 @@ def generate_key():
     )
     key = base64.urlsafe_b64encode(kdf.derive(password))  # Can only use kdf once
 
+
 def encrypt_program():
-    key = b'' 
+    key = b''
     input_file = 'test.py'
     output_file = 'test.encrypted'
 
@@ -41,7 +43,7 @@ def encrypt_program():
 
 
 def decrypt_program():
-    key = b'' 
+    key = b''
     input_file = 'test.encrypted'
     output_file = 'test.txt'
 
