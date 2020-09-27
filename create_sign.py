@@ -14,11 +14,9 @@ def sign():
     else:
         raise PermissionError
     data = data.encode()
-    signature = crypto.sign(pkey, data, "sha256")
-    data_base64 = base64.b64encode(signature)
-
-    with open("signature", "wb") as f:
-        print(signature)
-        f.write(signature)
+    sign = crypto.sign(pkey, data, "sha256")
+    data_base64 = base64.b64encode(sign)
+    with open("sign", "wb") as f:
+        f.write(data_base64)
 
 sign()
