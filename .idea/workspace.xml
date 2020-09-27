@@ -39,7 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.signature">
+  <component name="RunManager" selected="Python.main">
     <configuration name="create_sign" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Protection exec" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,9 +105,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.signature" />
-        <item itemvalue="Python.create_sign" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.create_sign" />
+        <item itemvalue="Python.signature" />
       </list>
     </recent_temporary>
   </component>
