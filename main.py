@@ -6,7 +6,7 @@ import platform
 
 # print(platform.uname())
 win = tkinter.Tk()
-win.title("Vérifier la clé produit")
+win.title("Chemin pour les fichiers")
 app = file_gui.gui()
 win.mainloop()
 
