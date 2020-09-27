@@ -33,16 +33,16 @@ def verify(path, path_sign):
     data = data.encode()
     x509 = crypto.X509()
     x509.set_pubkey(pkey)
-    sign2=sign()
-    print(crypto.verify(x509,sign2,data,"sha256"))
+    sign()
     with open(path_sign, "rb") as f:
         signature = f.read()
-        print(type(signature))
+        print(signature)
+    signature = base64.b64decode(signature)
     print(crypto.verify(x509, signature, data, "sha256"))
     return 0
 
 
-
+print(verify("Licence.xlsx", "sign"))
 # print(verify(signature))
 
 # code = compile("print('hello world')", '<string>', 'eval')
