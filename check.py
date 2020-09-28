@@ -25,7 +25,7 @@ def check_key(licence,frame,L1):
                     L1.set("Hello word")
                     return True
                 else:
-                    messagebox.showerror(title="License key error", message="There is an error of user name")
+                    messagebox.showerror(title="Wrong licence", message="Wrong computer with this software")
                     frame.update()
                     return False
         messagebox.showerror(title="License key error", message="There is an error of license")
