@@ -30,6 +30,6 @@ def show_info(top):
 
     # tk.Label(root, text=hash_info).pack()
     tk.Entry.pack(tk.Entry(frame, textvariable=sign_file, width=65, state="readonly"))
-    tk.Button(frame, text="ok", command=frame.destroy).pack()
+    tk.Button(frame, text="Close", command=top.destroy).pack()
 
     frame.pack()

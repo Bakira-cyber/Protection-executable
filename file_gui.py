@@ -5,11 +5,10 @@ import true_key
 import cpuInfos
 
 
-
 class gui:
-    def __init__(self,master):
+    def __init__(self, master):
         self.frame = tkinter.Frame(borderwidth=10)
-        self.master=master
+        self.master = master
         self.createMenuBar(self.master)
         self.excel_file = tkinter.StringVar()
         self.sign_file = tkinter.StringVar()
@@ -44,15 +43,17 @@ class gui:
                 print(e)
 
     def bt_valid(self):
-        self.frame.after(5, lambda: self.valid())
+        # self.frame.after(5, lambda: self.valid())
+        if self.excel_file.get() != "" and self.sign_file.get() != "":
+            if signature.verify(self.excel_file.get(), self.sign_file.get()) is None:
+                win = tkinter.Toplevel()
+                win.configure(background='#9ac0e4')
+                win.title("Vérifier la clé produit")
+                app = true_key.c_key(win, self.excel_file.get())
+                win.mainloop()
 
     def valid(self):
-        if signature.verify(self.excel_file.get(), self.sign_file.get()) is None:
-            win = tkinter.Toplevel()
-            win.configure(background='#9ac0e4')
-            win.title("Vérifier la clé produit")
-            app = true_key.c_key(win, self.excel_file.get())
-            win.mainloop()
+        pass
 
     def createMenuBar(self, master):  # Création du de la barre de tache
 
