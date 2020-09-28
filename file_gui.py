@@ -2,11 +2,15 @@ import tkinter
 from tkinter import filedialog
 import signature
 import true_key
+import cpuInfos
+
 
 
 class gui:
-    def __init__(self):
+    def __init__(self,master):
         self.frame = tkinter.Frame(borderwidth=10)
+        self.master=master
+        self.createMenuBar(self.master)
         self.excel_file = tkinter.StringVar()
         self.sign_file = tkinter.StringVar()
         tkinter.Label.pack(tkinter.Label(self.frame, text="Enter the Excel file path"))
@@ -49,3 +53,17 @@ class gui:
             win.title("Vérifier la clé produit")
             app = true_key.c_key(win, self.excel_file.get())
             win.mainloop()
+
+    def createMenuBar(self, master):  # Création du de la barre de tache
+
+        menubar = tkinter.Menu(master)
+        menufichier = tkinter.Menu(menubar, tearoff=0)
+
+        menufichier.add_command(label="Show coputer info", command=lambda: self.show_info())
+        menubar.add_cascade(label="Setting", menu=menufichier)
+        master.config(menu=menubar)
+
+    def show_info(self):
+        top = tkinter.Toplevel()
+        cpuInfos.show_info(top)
+        top.mainloop()

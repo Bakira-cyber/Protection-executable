@@ -4,8 +4,8 @@ import hashlib
 import json
 
 
-def show_info():
-    root = tk.Tk()
+def show_info(top):
+    frame = tk.Frame(master=top, borderwidth=10)
     sign_file = tk.StringVar()
 
     info = get_cpu_info()
@@ -23,16 +23,13 @@ def show_info():
     hash_info.update(info)
     hash_info.hexdigest
     """
+
     print("Hash of the CPU's infos")
 
-    root.title("Protection des Exécutables")
+    # frame.title("Protection des Exécutables")
 
     # tk.Label(root, text=hash_info).pack()
-    tk.Entry.pack(tk.Entry(root, textvariable=sign_file, width=0.7, state="readonly", exportselection=0))
-    tk.Button(root, text="ok", command=root.destroy).pack()
+    tk.Entry.pack(tk.Entry(frame, textvariable=sign_file, width=65, state="readonly"))
+    tk.Button(frame, text="ok", command=frame.destroy).pack()
 
-    root.mainloop()
-
-
-if __name__ == '__main__':
-    show_info()
+    frame.pack()

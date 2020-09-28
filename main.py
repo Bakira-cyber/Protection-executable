@@ -7,7 +7,7 @@ import platform
 # print(platform.uname())
 win = tkinter.Tk()
 win.title("Chemin pour les fichiers")
-app = file_gui.gui()
+app = file_gui.gui(win)
 win.mainloop()
 
 # check=threads.DetectDBG()
