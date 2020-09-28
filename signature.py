@@ -38,12 +38,5 @@ def verify(path, path_sign):
         signature = f.read()
         print(signature)
     signature = base64.b64decode(signature)
-    print(crypto.verify(x509, signature, data, "sha256"))
-    return 0
+    return crypto.verify(x509, signature, data, "sha256")
 
-
-print(verify("Licence.xlsx", "sign"))
-# print(verify(signature))
-
-# code = compile("print('hello world')", '<string>', 'eval')
-# exec(code)
