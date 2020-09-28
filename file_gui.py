@@ -44,10 +44,8 @@ class gui:
 
     def valid(self):
         if signature.verify(self.excel_file.get(), self.sign_file.get()) is None:
-
             win = tkinter.Toplevel()
             win.configure(background='#9ac0e4')
             win.title("Vérifier la clé produit")
-            app = true_key.c_key(win)
-            win.geometry("300x50")
+            app = true_key.c_key(win, self.excel_file.get())
             win.mainloop()
