@@ -16,7 +16,7 @@ def sign():
     data = data.encode()
     sign = crypto.sign(pkey, data, "sha256")
     data_base64 = base64.b64encode(sign)
-    with open("sign", "wb") as f:
+    with open("signature", "wb") as f:
         f.write(data_base64)
 
 sign()

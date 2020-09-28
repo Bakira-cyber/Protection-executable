@@ -6,7 +6,7 @@ import getpass
 def check_key(licence,frame,L1):
     user_name = getpass.getuser()
     print(type(user_name))
-    path = "Licence.xlsx"
+    path = licence
     book = load_workbook(filename=path, data_only=True)
     worksheet_names = book.sheetnames
     licenceplate = dict()

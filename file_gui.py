@@ -35,7 +35,7 @@ class gui:
                 print(e)
 
     def open_sign_button(self):
-        file_name = filedialog.askopenfile(mode='r', filetypes=[("signature", "*")])
+        file_name = filedialog.askopenfile(mode='r', filetypes=[("", "*")])
         if file_name is not None:
             try:
                 self.sign_file.set(file_name.name)
