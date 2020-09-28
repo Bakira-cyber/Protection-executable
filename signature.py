@@ -35,9 +35,9 @@ def verify(path, path_sign):
     x509.set_pubkey(pkey)
     with open(path_sign, "rb") as f:
         signature = f.read()
-        print(signature)
     signature = base64.b64decode(signature)
     return crypto.verify(x509, signature, data, "sha256")
 
+
 sign()
-verify("Licence.xlsx","sign")
+verify("Licence.xlsx", "signature")

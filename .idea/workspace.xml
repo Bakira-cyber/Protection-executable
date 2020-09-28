@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b7d0c09-d9a1-4d5e-bf55-cc2e4d6fda53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Licence.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Licence.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_sign.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_sign.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signature" beforeDir="false" afterPath="$PROJECT_DIR$/signature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sign" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/signature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/true_key.py" beforeDir="false" afterPath="$PROJECT_DIR$/true_key.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.signature">
     <configuration name="create_sign" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Protection exec" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,7 +59,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Protection exec" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,9 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.create_sign" />
         <item itemvalue="Python.signature" />
+        <item itemvalue="Python.create_sign" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601305317751</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="new excel">
+      <created>1601306723171</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1601306723171</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -388,7 +389,8 @@
     <MESSAGE value="get cpu info" />
     <MESSAGE value="gui" />
     <MESSAGE value="show info gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="show info gui" />
+    <MESSAGE value="new excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="new excel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600883347246">
@@ -403,10 +405,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601245195430" />
-    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1601305316783">
+    <state x="614" y="116" key="CommitChangelistDialog2" timestamp="1601306722030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601305316783" />
+    <state x="614" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601306722030" />
     <state x="-457" y="332" width="1736" height="856" key="DiffContextDialog" timestamp="1601300623133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -415,22 +417,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600883675932" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1601306664686">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1601307717004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601306664686" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1601306664686">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601307717004" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1601307717004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601306664686" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1601306664686">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601307717004" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1601307717004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601306664686" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1601306664686">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601307717004" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1601307717004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601306664686" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601307717004" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1601248438884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
