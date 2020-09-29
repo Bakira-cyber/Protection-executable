@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def sign():
-    df = pd.read_excel(r'D:\Python projects\Software protection\Licence.xlsx')
+    df = pd.read_excel('Licence.xlsx')
     data = df.to_string()
     key_file = open("key.pem", "r")
     key = key_file.read()
