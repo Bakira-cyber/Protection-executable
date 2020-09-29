@@ -5,8 +5,6 @@ import cpuInfos
 def check_key(licence, frame, L1):
     with open(licence, "r") as f:
         data = f.read()
-    print(type(data), data)
-    print("\n", type(cpuInfos.get_info()), cpuInfos.get_info())
     if data == cpuInfos.get_info():
         L1.set("Hello word")
         return True

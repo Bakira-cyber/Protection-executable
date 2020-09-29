@@ -2,25 +2,9 @@ from OpenSSL import crypto
 import base64
 
 
-def sign():
-    with open('Licence.txt', "r") as f:
-        data = f.read()
-    key_file = open("key.pem", "r")
-    key = key_file.read()
-    key_file.close()
-    if key.startswith('-----BEGIN '):
-        pkey = crypto.load_privatekey(crypto.FILETYPE_PEM, key)
-    else:
-        raise PermissionError
-    data = data.encode()
-    sign = crypto.sign(pkey, data, "sha256")
-    print(base64.b64encode(sign))
-
-
 def verify(path, path_sign):
     with open(path, "r") as f:
         data = f.read()
-    print(data)
     key_file = open("public.pem", "r")
     key = key_file.read()
     key_file.close()
