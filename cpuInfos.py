@@ -4,17 +4,17 @@ import hashlib
 import json
 
 
+def get_info():
+    info = get_cpu_info()
+    info = json.dumps(info)
+    return hashlib.sha256(info.encode('utf-8')).hexdigest()
+
+
 def show_info(top):
     frame = tk.Frame(master=top, borderwidth=10)
     sign_file = tk.StringVar()
 
-    info = get_cpu_info()
-
-    info = json.dumps(info)
-
-    hash_info = hashlib.sha256(info.encode('utf-8')).hexdigest()
-
-    sign_file.set(hash_info)
+    sign_file.set(get_info())
 
     """
     info.encode('utf-8')

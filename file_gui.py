@@ -12,10 +12,12 @@ class gui:
         self.createMenuBar(self.master)
         self.excel_file = tkinter.StringVar()
         self.sign_file = tkinter.StringVar()
-        tkinter.Label.pack(tkinter.Label(self.frame, text="Enter the Excel file path"))
+        tkinter.Label.pack(tkinter.Label(self.frame, text="Enter the licence file path"))
+        # tkinter.Label.pack(tkinter.Label(self.frame, text="Enter the Excel file path"))
         tkinter.Entry.pack(
             tkinter.Entry(self.frame, textvariable=self.excel_file, width=70, state="readonly", exportselection=0))
-        btn_open_excel = tkinter.Button(self.frame, text='Open the Excel', command=lambda: self.open_excel_button())
+        btn_open_excel = tkinter.Button(self.frame, text='Open the text', command=lambda: self.open_txt_button())
+        # btn_open_excel = tkinter.Button(self.frame, text='Open the Excel', command=lambda: self.open_excel_button())
         btn_open_excel.pack()
         tkinter.Label.pack(tkinter.Label(self.frame, text="Enter the signature file path"))
         tkinter.Entry.pack(
@@ -28,6 +30,14 @@ class gui:
 
     def open_excel_button(self):
         file_name = filedialog.askopenfile(mode='r', filetypes=[("Excel files", "*.xlsx")])
+        if file_name is not None:
+            try:
+                self.excel_file.set(file_name.name)
+            except Exception as e:
+                print(e)
+
+    def open_txt_button(self):
+        file_name = filedialog.askopenfile(mode='r', filetypes=[("Text files", "*.txt")])
         if file_name is not None:
             try:
                 self.excel_file.set(file_name.name)
@@ -51,9 +61,6 @@ class gui:
                 win.title("Vérifier la clé produit")
                 app = true_key.c_key(win, self.excel_file.get())
                 win.mainloop()
-
-    def valid(self):
-        pass
 
     def createMenuBar(self, master):  # Création du de la barre de tache
 
