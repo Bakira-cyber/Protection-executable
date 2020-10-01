@@ -7,10 +7,10 @@ def check_key(licence, frame, L1):
         data = f.read()
     if data == cpuInfos.get_info():
         L1.set("Hello word")
+        frame.update()
         return True
     else:
         messagebox.showerror(title="Wrong licence", message="Wrong computer with this software")
-        frame.update()
         return False
 
 # def check_key(licence, frame, L1):

@@ -84,6 +84,7 @@ def controlValues(path):
         print(path, hash_code)
         return hash_code
 
+controlValues("check.py")
 
 
 """

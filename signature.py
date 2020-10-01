@@ -23,6 +23,7 @@ def verify(path, path_sign):
         return crypto.verify(x509, signature, data, "sha256")
     except:
         messagebox.showerror(title="Signature error", message="Your signature is not corresponding to the licence file")
+        return 0
 
 # def verify(path, path_sign):
 #     df = pd.read_excel(path)
