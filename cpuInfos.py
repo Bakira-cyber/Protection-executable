@@ -4,17 +4,17 @@ import hashlib
 import json
 
 
-def show_info():
-    root = tk.Tk()
+def get_info():
+    info = get_cpu_info()
+    info = json.dumps(info)
+    return hashlib.sha256(info.encode('utf-8')).hexdigest()
+
+
+def show_info(top):
+    frame = tk.Frame(master=top, borderwidth=10)
     sign_file = tk.StringVar()
 
-    info = get_cpu_info()
-
-    info = json.dumps(info)
-
-    hash_info = hashlib.sha256(info.encode('utf-8')).hexdigest()
-
-    sign_file.set(hash_info)
+    sign_file.set(get_info())
 
     """
     info.encode('utf-8')
@@ -23,16 +23,8 @@ def show_info():
     hash_info.update(info)
     hash_info.hexdigest
     """
-    print("Hash of the CPU's infos")
 
-    root.title("Protection des Exécutables")
+    tk.Entry.pack(tk.Entry(frame, textvariable=sign_file, width=65, state="readonly"))
+    tk.Button(frame, text="Close", command=top.destroy).pack()
 
-    # tk.Label(root, text=hash_info).pack()
-    tk.Entry.pack(tk.Entry(root, textvariable=sign_file, width=0.7, state="readonly", exportselection=0))
-    tk.Button(root, text="ok", command=root.destroy).pack()
-
-    root.mainloop()
-
-
-if __name__ == '__main__':
-    show_info()
+    frame.pack()
