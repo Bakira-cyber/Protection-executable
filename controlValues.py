@@ -85,8 +85,6 @@ def controlValues(path):
         return hash_code
 
 
-controlValues("file_gui.py")
-controlvalues_file_gui()
 
 """
 def controlValues(file_name):
