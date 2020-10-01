@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601562204497</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Next addition to the project">
+      <created>1601562334503</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1601562334503</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -405,10 +412,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600883391597" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1601562211300">
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1601562352186">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601562211300" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601562352186" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601222267942" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1600960957396">
       <screen x="0" y="0" width="1920" height="1040" />
