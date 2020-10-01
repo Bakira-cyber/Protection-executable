@@ -24,11 +24,6 @@ def show_info(top):
     hash_info.hexdigest
     """
 
-    print("Hash of the CPU's infos")
-
-    # frame.title("Protection des Exécutables")
-
-    # tk.Label(root, text=hash_info).pack()
     tk.Entry.pack(tk.Entry(frame, textvariable=sign_file, width=65, state="readonly"))
     tk.Button(frame, text="Close", command=top.destroy).pack()
 

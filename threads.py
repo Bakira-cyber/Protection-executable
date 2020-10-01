@@ -2,7 +2,7 @@ import random
 import sys, os
 from threading import Thread
 import time
-
+import file_gui
 import antiDBG
 import controlValues
 
@@ -18,8 +18,6 @@ class DetectDBG(Thread):
             sys.stdout.flush()
 
             antiDBG.isThereADebugger()
-            #controlValues.controlValues(os.path.dirname(sys.argv[0]))
-            # os.getcwd() or os.path.dirname(sys.argv[0])
 
             attente = 10
             time.sleep(attente)
