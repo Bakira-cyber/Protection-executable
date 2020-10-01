@@ -2,7 +2,7 @@
 import hashlib
 import sys, os
 
-<<<<<<< HEAD
+
 # Import ConfigParser to easily access control values
 import configparser
 
