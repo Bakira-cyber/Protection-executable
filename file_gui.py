@@ -57,8 +57,7 @@ class gui:
         if self.excel_file.get() != "" and self.sign_file.get() != "":
             if signature.verify(self.excel_file.get(), self.sign_file.get()) is None:
                 win = tkinter.Toplevel()
-                win.configure(background='#9ac0e4')
-                win.title("Vérifier la clé produit")
+                win.title("Hello word")
                 app = true_key.c_key(win, self.excel_file.get())
                 win.mainloop()
 
@@ -67,8 +66,8 @@ class gui:
         menubar = tkinter.Menu(master)
         menufichier = tkinter.Menu(menubar, tearoff=0)
 
-        menufichier.add_command(label="Show coputer info", command=lambda: self.show_info())
-        menubar.add_cascade(label="Setting", menu=menufichier)
+        menufichier.add_command(label="Show computer info", command=lambda: self.show_info())
+        menubar.add_cascade(label="Computer's hash ", menu=menufichier)
         master.config(menu=menubar)
 
     def show_info(self):
