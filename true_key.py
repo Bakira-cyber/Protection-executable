@@ -1,11 +1,12 @@
 import tkinter
 import os
-# import ask_key
 import check
+import controlValues
 
 
 class c_key:
     def __init__(self, master, path):
+        controlValues.controlvalues_check()
         if os.path.exists(path):
             self.frame = tkinter.Frame(master, bd=70)
             self.text = tkinter.StringVar()
