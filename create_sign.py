@@ -1,10 +1,9 @@
 from OpenSSL import crypto
 import base64
-import pandas as pd
 
 
 def sign():
-    with open('Licence.txt', "r") as f:
+    with open('licence_protection.txt', "r") as f:
         data = f.read()
     key_file = open("key.pem", "r")
     key = key_file.read()
@@ -16,7 +15,7 @@ def sign():
     data = data.encode()
     sign = crypto.sign(pkey, data, "sha256")
     data_base64 = base64.b64encode(sign)
-    with open("signature", "wb") as f:
+    with open("signature_protection", "wb") as f:
         f.write(data_base64)
 
 
