@@ -79,12 +79,10 @@ def controlvalues_file_gui():
 def controlValues(path):
     with open(path, 'rb') as f:
         code = f.read()
-        print(code)
         hash_code = hashlib.sha256(code).hexdigest()
         print(path, hash_code)
         return hash_code
 
-controlValues("check.py")
 
 
 """

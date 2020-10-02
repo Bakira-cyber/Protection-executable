@@ -11,4 +11,6 @@ def isThereADebugger():
     if windll.kernel32.IsDebuggerPresent():
         print("Error ! You are not allowed to debug the Program !")
         exit(-1)
-    return 0
+    else:
+        print("RSA")
+        return 0

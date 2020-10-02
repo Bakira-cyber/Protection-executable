@@ -1,15 +1,18 @@
 from tkinter import messagebox
+import tkinter
+from PIL import ImageTk,Image
 import cpuInfos
 
+global img
 
-def check_key(licence, frame, L1):
+def check_key(licence, canvas, L1,master):
     with open(licence, "r") as f:
         data = f.read()
     if data == cpuInfos.get_info():
-        L1.set("Hello word")
-        frame.update()
+        canvas.pack()
         return True
     else:
+        master.destroy()
         messagebox.showerror(title="Wrong licence", message="Wrong computer with this software")
         return False
 
