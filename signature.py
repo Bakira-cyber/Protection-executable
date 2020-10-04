@@ -1,3 +1,4 @@
+from tkinter import messagebox
 from OpenSSL import crypto
 import base64
 
@@ -18,7 +19,10 @@ def verify(path, path_sign):
     with open(path_sign, "rb") as f:
         signature = f.read()
     signature = base64.b64decode(signature)
-    return crypto.verify(x509, signature, data, "sha256")
+    try:
+        return crypto.verify(x509, signature, data, "sha256")
+    except:
+        messagebox.showerror(title="Signature error", message="Your signature is not corresponding to the licence file")
 
 # def verify(path, path_sign):
 #     df = pd.read_excel(path)

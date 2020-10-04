@@ -1,5 +1,6 @@
 import random
 import sys, os
+import tkinter
 from threading import Thread
 import time
 import file_gui
@@ -12,16 +13,15 @@ class DetectDBG(Thread):
     def __init__(self):
         Thread.__init__(self)
 
-    def run(self):
-        while True:
+    def run_deb(self):
             sys.stdout.write("Analyse")
             sys.stdout.flush()
 
             antiDBG.isThereADebugger()
 
-            attente = 10
-            time.sleep(attente)
 
+    def run_gui(self):
+        print(1)
 
 """
 usefull links : 

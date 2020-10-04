@@ -12,27 +12,29 @@ original_main_controlvalue = config['ControlValues']['original_main_controlvalue
 original_threads_controlvalue = config['ControlValues']['original_threads_controlvalue']
 original_antiDBG_controlvalue = config['ControlValues']['original_antiDBG_controlvalue']
 original_control_controlvalue = config['ControlValues']['original_control_controlvalue']
+original_check_controlValue = config['ControlValues']['original_check_controlValue']
+original_true_controlValue = config['ControlValues']['original_true_controlValue']
+original_file_gui_controlValue = config['ControlValues']['original_file_gui_controlValue']
 
 def controlvalues_main():
-
     with open("main.py") as main_file:
         data = main_file.read()
-        returned_main_controlvalue = hashlib.sha256(data).hexdigest()
+    returned_main_controlvalue = hashlib.sha256(data).hexdigest()
 
     if original_main_controlvalue != returned_main_controlvalue:
         exit(-1)
 
-def controlvalues_threads():
 
+def controlvalues_threads():
     with open("threads.py") as threads_file:
         data = threads_file.read()
-        returned_threads_controlvalue = hashlib.sha256(data).hexdigest()
+    returned_threads_controlvalue = hashlib.sha256(data).hexdigest()
 
     if original_threads_controlvalue != returned_threads_controlvalue:
         exit(-1)
 
-def controlvalues_antiDBG():
 
+def controlvalues_antiDBG():
     with open("antiDBG.py") as antiDBG_file:
         data = antiDBG_file.read()
         returned_antiDBG_controlvalue = hashlib.sha256(data).hexdigest()
@@ -40,8 +42,8 @@ def controlvalues_antiDBG():
     if original_antiDBG_controlvalue != returned_antiDBG_controlvalue:
         exit(-1)
 
-def controlvalues_control():
 
+def controlvalues_control():
     with open("controlValues.py") as control_file:
         data = control_file.read()
         returned_control_controlvalue = hashlib.sha256(data).hexdigest()
@@ -50,12 +52,38 @@ def controlvalues_control():
         exit(-1)
 
 
+def controlvalues_check():
+    with open("check.py", 'rb') as check:
+        data = check.read()
+    returned_controlvalue = hashlib.sha256(data).hexdigest()
+    if original_check_controlValue != returned_controlvalue:
+        exit(-1)
+
+
+def controlvalues_true():
+    with open("true_key.py", 'rb') as check:
+        data = check.read()
+    returned_controlvalue = hashlib.sha256(data).hexdigest()
+    if original_true_controlValue != returned_controlvalue:
+        exit(-1)
+
+
+def controlvalues_file_gui():
+    with open("file_gui.py", 'rb') as check:
+        data = check.read()
+    returned_controlvalue = hashlib.sha256(data).hexdigest()
+    if original_file_gui_controlValue != returned_controlvalue:
+        exit(-1)
+
+
 def controlValues(path):
     with open(path, 'rb') as f:
         code = f.read()
-        hashlib.sha256().update(code)
-        print(path, hashlib.sha256().hexdigest())
-        return hashlib.sha256().hexdigest()
+        print(code)
+        hash_code = hashlib.sha256(code).hexdigest()
+        print(path, hash_code)
+        return hash_code
+
 
 
 """
