@@ -1,13 +1,17 @@
 import tkinter
+import controlValues
 import threads
 import file_gui
+import antiDBG
 
-
-win = tkinter.Tk()
-win.title("Chemin pour les fichiers")
-app = file_gui.gui(win)
-win.mainloop()
-
+if not antiDBG.isThereADebugger():
+    controlValues.control_all()
+    win = tkinter.Tk()
+    win.title("Chemin pour les fichiers")
+    app = file_gui.gui(win)
+    win.mainloop()
+else:
+    exit(-1)
 # check=threads.DetectDBG()
 # check.run()
 # win = tkinter.Tk()

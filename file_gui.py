@@ -54,8 +54,7 @@ class gui:
                 print(e)
 
     def bt_valid(self):
-        # self.frame.after(5, lambda: self.valid())
-        # controlValues.controlvalues_true()
+        controlValues.control_all()
         if self.excel_file.get() != "" and self.sign_file.get() != "":
             if signature.verify(self.excel_file.get(), self.sign_file.get()) is None:
                 win = tkinter.Toplevel()

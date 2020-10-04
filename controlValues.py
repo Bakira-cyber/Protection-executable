@@ -1,6 +1,5 @@
 # Import hashlib library (SHA256 method is part of it)
 import hashlib
-import sys, os
 
 # Import ConfigParser to easily access control values
 import configparser
@@ -16,8 +15,9 @@ original_check_controlValue = config['ControlValues']['original_check_controlVal
 original_true_controlValue = config['ControlValues']['original_true_controlValue']
 original_file_gui_controlValue = config['ControlValues']['original_file_gui_controlValue']
 
+
 def controlvalues_main():
-    with open("main.py") as main_file:
+    with open("main.py", "rb") as main_file:
         data = main_file.read()
     returned_main_controlvalue = hashlib.sha256(data).hexdigest()
 
@@ -26,7 +26,7 @@ def controlvalues_main():
 
 
 def controlvalues_threads():
-    with open("threads.py") as threads_file:
+    with open("threads.py", "rb") as threads_file:
         data = threads_file.read()
     returned_threads_controlvalue = hashlib.sha256(data).hexdigest()
 
@@ -35,18 +35,18 @@ def controlvalues_threads():
 
 
 def controlvalues_antiDBG():
-    with open("antiDBG.py") as antiDBG_file:
+    with open("antiDBG.py", "rb") as antiDBG_file:
         data = antiDBG_file.read()
-        returned_antiDBG_controlvalue = hashlib.sha256(data).hexdigest()
+    returned_antiDBG_controlvalue = hashlib.sha256(data).hexdigest()
 
     if original_antiDBG_controlvalue != returned_antiDBG_controlvalue:
         exit(-1)
 
 
 def controlvalues_control():
-    with open("controlValues.py") as control_file:
+    with open("controlValues.py", "rb") as control_file:
         data = control_file.read()
-        returned_control_controlvalue = hashlib.sha256(data).hexdigest()
+    returned_control_controlvalue = hashlib.sha256(data).hexdigest()
 
     if original_control_controlvalue != returned_control_controlvalue:
         exit(-1)
@@ -76,6 +76,14 @@ def controlvalues_file_gui():
         exit(-1)
 
 
+def control_all():
+    controlvalues_main()
+    controlvalues_antiDBG()
+    controlvalues_file_gui()
+    controlvalues_true()
+    controlvalues_check()
+
+
 def controlValues(path):
     with open(path, 'rb') as f:
         code = f.read()
@@ -84,6 +92,7 @@ def controlValues(path):
         return hash_code
 
 
+controlValues("main.py")
 
 """
 def controlValues(file_name):

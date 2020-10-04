@@ -1,11 +1,10 @@
 from tkinter import messagebox
-import tkinter
-from PIL import ImageTk,Image
 import cpuInfos
+import controlValues
 
-global img
 
-def check_key(licence, canvas, L1,master):
+def check_key(licence, canvas, master):
+    controlValues.control_all()
     with open(licence, "r") as f:
         data = f.read()
     if data == cpuInfos.get_info():
