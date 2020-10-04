@@ -79,6 +79,7 @@ def controlvalues_file_gui():
 def control_all():
     controlvalues_main()
     controlvalues_antiDBG()
+    controlvalues_control()
     controlvalues_file_gui()
     controlvalues_true()
     controlvalues_check()
@@ -92,7 +93,6 @@ def controlValues(path):
         return hash_code
 
 
-controlValues("main.py")
 
 """
 def controlValues(file_name):
